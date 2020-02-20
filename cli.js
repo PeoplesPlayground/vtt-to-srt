@@ -28,15 +28,9 @@ if (cli.length >= 2) {
   var input = fs.createReadStream(cli[0]);
   var output = fs.createWriteStream(cli[1]);
 
-} else if (cli.length === 1) {
-
-  var input = process.stdin;
-  var output = fs.createWriteStream(cli[0]);
-
 } else {
 
-  var input = process.stdin;
-  var output = process.stdout;
+    return printHelp();
 
 }
 
